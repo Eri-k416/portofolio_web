@@ -119,10 +119,6 @@ img {
   position: relative;
 }
 
-.profile-image-behind-wrapper {
-    position: relative;
-}
-
 .profile-details {
     flex-grow: 1;
     padding-inline: 8rem;
@@ -526,7 +522,21 @@ img {
   color: #a0aec0;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1074px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-logo {
+    content: "Muhammad Fachrydzi.";
+  }
+  .nav-links {
+    gap: 12px;
+    
+  }
+  .nav-links a {
+    font-size: small;
+  }
   .header-profile {
     flex-direction: column;
     text-align: center;
@@ -541,19 +551,30 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .nav-links {
-    gap: 12px;
+  .profile-image-wrapper {
+    position: relative;
   }
   
   .profile-img {
-    transform: scale(1.5) translateY(0.31rem) translateX(2rem);
+    max-width: 360px;
+    transform: scale(1.7) translateY(1rem) translateX(2rem);
   }
 
   .profile-img-behind {
-    transform: scale(2.8) translateY(10rem) translateX(-1rem);
+    top: 33rem;
+    left: -20%;
+    transform: scale(3);
   }
 
   .portofolio-piece {
-    min-height: 20vh;
+    min-height: 15vh;
+    max-height: 400px;
+    overflow: scroll;
+    scrollbar-width: none;
+    transform: scale(0.7);
+    
+  }
+  .portofolio-piece.active {
+      transform: scale(0.8) translateY(1.2rem);
   }
 }
